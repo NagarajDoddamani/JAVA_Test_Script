@@ -1,0 +1,64 @@
+class Stack {
+    int max = 5;
+    int top = -1;
+    int[] stack = new int[max];
+
+    // PUSH operation
+    void push(int x) {
+        if (top == max - 1) {
+            System.out.println("Error: Stack Overflow");
+        } else {
+            stack[++top] = x;
+            System.out.println(x + " pushed into stack");
+        }
+    }
+
+    // POP operation
+    void pop() {
+        if (top == -1) {
+            System.out.println("Error: Stack Underflow");
+        } else {
+            int x = stack[top--];
+            System.out.println("Popped element: " + x);
+        }
+    }
+
+    // PEEK operation
+    void peek() {
+        if (top == -1) {
+            System.out.println("Error: Stack is empty");
+        } else {
+            System.out.println("Top element: " + stack[top]);
+        }
+    }
+
+    // DISPLAY operation
+    void display() {
+        if (top == -1) {
+            System.out.println("Stack is empty");
+        } else {
+            System.out.print("Stack elements: ");
+            for (int i = top; i >= 0; i--) {
+                System.out.print(stack[i] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    // isEmpty
+    void isEmpty() {
+        if (top == -1)
+            System.out.println("Stack is empty");
+        else
+            System.out.println("Stack is not empty");
+    }
+
+    // isFull
+    void isFull() {
+        if (top == max - 1)
+            System.out.println("Stack is full");
+        else
+            System.out.println("Stack is not full");
+    }
+}
+
