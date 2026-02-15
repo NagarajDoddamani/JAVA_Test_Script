@@ -1,8 +1,13 @@
 class Stack {
-    int max = 5;
-    int top = -1;
-    int[] stack = new int[max];
+    int max, top;
+    int[] stack;
 
+    void stack(int max) {
+        this.max = max;
+        this.top = -1;
+        this.stack = new int[max];
+    }
+    
     // PUSH operation
     void push(int x) {
         if (top == max - 1) {
