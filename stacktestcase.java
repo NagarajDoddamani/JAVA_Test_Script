@@ -10,7 +10,7 @@ class Stack {
     
     // PUSH operation
     void push(int x) {
-        if (top == max - 1) {
+        if (isFull() == 1) {
             System.out.println("Error: Stack Overflow");
         } else {
             stack[++top] = x;
@@ -20,7 +20,7 @@ class Stack {
 
     // POP operation
     void pop() {
-        if (top == -1) {
+        if (isEmpty() == 1) {
             System.out.println("Error: Stack Underflow");
         } else {
             int x = stack[top--];
@@ -30,7 +30,7 @@ class Stack {
 
     // PEEK operation
     void peek() {
-        if (top == -1) {
+        if (isEmpty() == 1) {
             System.out.println("Error: Stack is empty");
         } else {
             System.out.println("Top element: " + stack[top]);
@@ -51,19 +51,19 @@ class Stack {
     }
 
     // isEmpty
-    void isEmpty() {
+    int isEmpty() {
         if (top == -1)
-            System.out.println("Stack is empty");
+            return 1;
         else
-            System.out.println("Stack is not empty");
+            return 0;
     }
 
     // isFull
-    void isFull() {
+    int isFull() {
         if (top == max - 1)
-            System.out.println("Stack is full");
+            return 1;
         else
-            System.out.println("Stack is not full");
+            return 0;
     }
 }
 
