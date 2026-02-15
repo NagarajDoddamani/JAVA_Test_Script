@@ -1,4 +1,6 @@
-class Stack {
+package StackAN;
+
+class stackImplimentation {
     int max, top;
     int[] stack;
 
@@ -39,7 +41,7 @@ class Stack {
 
     // DISPLAY operation
     void display() {
-        if (top == -1) {
+        if (isEmpty() == 1) {
             System.out.println("Stack is empty");
         } else {
             System.out.print("Stack elements: ");
